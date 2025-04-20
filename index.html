@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjali 🥺</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #fbd3e9, #bb377d);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+h1 {
+  font-size: 3em;
+  color: #fff;
+  animation: fadeInDown 2s ease;
+}
+
+p {
+  color: #fff;
+  font-size: 1.2em;
+  max-width: 600px;
+  text-align: center;
+  margin: 20px;
+  animation: fadeIn 3s ease;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  animation: bounceIn 3s ease;
+}
+
+.options button {
+  background-color: #fff;
+  color: #bb377d;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.options button:hover {
+  transform: scale(1.1);
+}
+
+.photos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  animation: fadeIn 4s ease;
+}
+
+.photos img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.photos img:hover {
+  transform: scale(1.05);
+}
+
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 2rem;
+  animation: floatUp 5s linear infinite;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) scale(1); opacity: 1; }
+  100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}
+img {
+    background-size: contain;
+}
+
+  </style>
+</head>
+<body>
+  <h1>I'm Truly Sorry</h1>
+  <p>I know I made a mistake. You mean everything to me, and I never want to lose you. Please forgive me. I love you deeply.</p>
+  <div class="options">
+    <button onclick="respond('hug')">Give Me a Hug</button>
+    <button onclick="respond('smile')">Give Me a Smile</button>
+  </div>  <div class="photos">
+    <img src="https://i.pinimg.com/736x/37/02/b7/3702b78295fb1cf8391f3bf16d287915.jpg" alt="Photo 1">
+    <img src="Touching Sorry Messages For Your Girlfriend.jpeg" alt="Photo 2">
+    <img src="https://i.pinimg.com/736x/e7/af/74/e7af74020c3c706955ebac2e89bfc854.jpg" alt="Photo 3">
+    <img src="https://i.pinimg.com/736x/bf/2f/1d/bf2f1dae0a89ed73a8294c7b92956798.jpg" alt="Photo 4">
+  </div>  <div class="hearts" id="hearts"></div>  <script>
+    function respond(type) {
+      if (type === 'hug') {
+        alert("Yay! A hug from you means the world to me! I’ll never let you go again.");
+      } else if (type === 'smile') {
+        alert("That smile just melted my heart. I’ll keep it safe forever.");
+      }
+
+      for (let i = 0; i < 40; i++) {
+        const heart = document.createElement("div");
+        heart.className = 'heart';
+        heart.textContent = '❤';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+        document.getElementById('hearts').appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }
+    }
+  </script></body>
+</html>
